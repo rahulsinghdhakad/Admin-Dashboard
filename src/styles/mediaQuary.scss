@@ -1,0 +1,63 @@
+@media screen and (width<=1200px){
+    .dashboard{
+        overflow: auto;
+        .widget-container,
+        .charts,
+        .transcation-container{
+            flex-wrap: wrap;
+            padding:2rem 0;
+        }
+        .charts{
+            justify-content: center;
+            align-items: center;
+            .right-bar{
+                width: 50%;
+            }
+        }
+        .transcation-container{
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 1rem;
+            .transaction-table{
+                margin-left: 0;
+            }
+        }
+    }
+    .chart-box .pie-box{
+        width: 50%;
+    }
+}
+
+@media screen and (width<=900px){
+    .adminContainer{
+        grid-template-columns: 1fr !important;
+    }
+    aside{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black !important;
+    }
+}
+
+@media screen  and (width<=450px) {
+    .dashboard{
+        .charts{
+            .right-bar{
+                width: 60%;
+            }
+        }
+    }
+    .chart-box .pie-box{
+        width: 90%;
+    }
+    .transaction-table .table-box{
+        overflow: auto;
+
+    }
+    .dashboard-app-container .coupen form{
+        @include flex(column);
+        padding: 1rem 5px;
+    }
+}

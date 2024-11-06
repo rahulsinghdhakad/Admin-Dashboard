@@ -1,0 +1,173 @@
+.product-table {
+  height: 100vh;
+  padding: 1rem 2rem;
+  overflow: auto;
+}
+
+.product-link {
+  background-color: red;
+  color: white;
+  @include flex;
+  @include square(2.5rem);
+  border-radius: 50%;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.product-management {
+  height: 100vh;
+  @include flex(row, center, center);
+
+  section{
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 85%;
+    padding: 1rem;
+    width: 100%;
+    max-width: 400px;
+    @include flex(column,center,unset,1rem);
+    position: relative;
+
+    strong{
+      font-weight: 400;
+      font-size: 1rem;
+    }
+    span{
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.2rem;
+    }
+    img{
+      width: 100%;
+    }
+    p{
+      @include heading;
+      text-align: center;
+    }
+    h1{
+      text-align: center;
+    }
+  }
+
+
+  article {
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 85%;
+    padding: 2rem;
+    h2 {
+      text-align: center;
+      margin: 1rem;
+      letter-spacing: 2px;
+    }
+
+    form {
+      div {
+        @include flex(column, center, flex-start, 0);
+        padding: 1rem 0;
+        label {
+          font-weight: 500;
+        }
+        input {
+          background-color: white;
+          width: 100%;
+          padding: 5px;
+          border: none;
+          color: rgb(0, 0, 0);
+          border-radius: 4px;
+        }
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        margin: 1rem 0;
+        cursor: pointer
+      }
+      img{
+        @include square(6rem);
+        object-fit: cover;
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.transaction-management{
+  height: 100vh;
+  @include flex(row, center, center);
+
+  section{
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 85%;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+
+    h1{
+      @include heading;
+      margin: 2rem 0;
+      font-size: 1.5rem;
+    }
+
+    >div{
+      @include flex;
+      img{
+        @include square(4rem);
+        border-radius:5px;
+      }
+      a{
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+
+  article {
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 85%;
+    padding: 2rem;
+
+    h1{
+      @include heading;
+      margin: 2rem 0;
+      font-size: 1.5rem;
+    }
+
+    h5{
+      margin: 0.8rem 0;
+      font-size: 1.2rem;
+    }
+
+    p{
+      font-size: 1.1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      color: white;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      margin: 1.2rem 0;
+      cursor: pointer
+    }
+  }
+}

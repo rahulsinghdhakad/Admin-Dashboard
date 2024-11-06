@@ -1,0 +1,138 @@
+.dashboard{
+    height: 100vh;
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    .navbar{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        padding: 1rem 1rem 0.5rem 1rem;
+        @include flex(row,center,center,2rem);
+        svg{
+            font-size: 1.5rem;
+        }
+        input{
+            font-size: 1rem;
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 50px;
+            background-color: inherit;
+            color: white;
+            border: none;
+            outline: none;
+        }
+        img{
+            @include square(1.7rem);
+        }
+    }
+
+    .widget-container{
+        padding: 2rem 1rem;
+        @include flex(row,center,center,2rem);
+        overflow-x:auto ;
+        .widget{
+            position: relative;
+            background-color:rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            width: 15rem;
+            @include flex(row,unset,center,2rem);
+            padding:1rem;
+            p{
+                color: rgba(255, 255, 255, 0.6);
+            }
+            .before{
+                z-index: -1;
+                position: absolute;
+                width: 6rem;
+                height: 6rem;
+                border-radius: 50%;
+            }
+            .widget-logo{
+                position: relative;
+                @include square(5rem);
+                display: grid;
+                place-items: center center;
+                border-radius: 50%;
+                background-color: rgb(110, 110, 110);
+            } 
+        }
+    }
+
+    .charts{
+        padding: 1rem;
+        @include flex(row,unset,unset,2rem);
+        >div{
+            // box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 1rem
+        }
+        .chart-bar{
+            h1{
+                @include heading(1.5rem);
+                text-align: center;
+                margin: 1rem;
+            }
+            width: 65%;
+        }
+        .right-bar{
+            h1{
+                @include heading;
+                font-size: 1.5rem;
+            }
+            width: 35%;
+            padding: 2rem 0rem;
+            @include flex(column);
+            .container{
+                width: 100%;
+                padding: 1rem;
+                .item{
+                    padding: 0.6rem;
+                    @include flex(row,space-between,center,0);
+                    >div{
+                        width: 60%;
+                        height: 1rem;
+                        border-radius: 2rem;
+                        background-color: rgb(193, 193, 193);
+                        >div{
+                            height: 1rem;
+                            border-radius: 1.5rem;
+                            background-color: red;
+                        }
+                    };
+                }
+            }
+        }
+    }
+    .transcation-container{
+        display: flex;
+        padding: 1rem;
+        .doughnut-chart{
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            width: 14rem;
+            position: relative;
+            h1{
+                @include heading(1.2rem);
+                text-align: center;
+                margin: 0.2rem;
+            }
+            .icon{
+                @include positionCenter;
+                font-size: 2rem;
+            }
+        }
+        .transaction-table{
+            background-color:rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            width: 100%;
+            padding: 1rem 1rem 2rem 1rem;
+            margin: 0 0 0 2rem;
+            .heading{
+                @include heading(1.2rem);
+                text-align: center;
+                margin: 1rem;
+            }
+        }
+    }
+}
