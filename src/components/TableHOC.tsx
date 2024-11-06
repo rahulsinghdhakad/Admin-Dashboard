@@ -26,7 +26,6 @@ const TableHOC = <T extends object,>(
             nextPage,
             previousPage,
             pageCount,
-            gotoPage,
             canNextPage,
             canPreviousPage,
             state: { pageIndex }
