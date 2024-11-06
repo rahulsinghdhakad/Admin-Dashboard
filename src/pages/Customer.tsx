@@ -68,7 +68,7 @@ const arr: DataType[] = [
 ];
 
 const Customer = () => {
-  const [data, setData] = useState<DataType[]>(arr);
+  const [data] = useState<DataType[]>(arr);
 
   const Table = useCallback(TableHOC(columns, data, "product-table", "Customers"), []);
 
